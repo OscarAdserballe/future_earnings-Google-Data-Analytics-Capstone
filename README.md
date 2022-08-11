@@ -9,7 +9,7 @@ While it's probably not an ideal system of admissions as the increasing rat-race
 
 Under this system, if students only made their choice of education based on current data on future earnings for each of them, there should be a perfect positive correlation between the admission quotient (the grade average required to get in) and data on future earnings. This can be shown using a supply-and-demand curve that determines the admission quotient for each education pathway:
 
-![](Diagrams/Supply and Demand Diagram.jpg)
+![](Diagrams/Supply_and_Demand_Diagram.jpg)
 
 The "price" of an education, is the resulting admission quotient. Those with the highest grade averages have the highest capacity to "buy" their choice of education first, and if the model holds true of their decision-making, that will result in the highest-earning education having the highest price. The next-best students will flock after the second-highest earning education and so on. The result is the perfect positive correlation between admission quotient and projected wages. Thus, if it can be shown that that is not the case, we can conclude that students' decision-making is not solely based on financial outlook - yes, a very low bar to clear - and, in case it isnt, hopefully some hint of the extent it in fact does.
 
@@ -201,11 +201,6 @@ df2.to_csv("education_earnings_data.csv", index=False)
 ```
 
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## Analysing the data
 Going to R now, the goal is to analyse any potential relationship between the admission quotient and,
 * Wages right after the education
@@ -235,8 +230,8 @@ Analysing the different relationships provides the following results:
 (Note, an additional filter function is called to only look at those entries that contains a value for the studied column. Also, the wages are in the currency DKK (Danish Kroners) and unemployment in %)
 
 **Unemployment right out of school and admission quotients:**
-Linear model (level-level): 
-*Unemployment out of School = -2.8 \* admission_quotient + 39*
+
+* Linear model (level-level): *Unemployment out of School = -2.8 \* admission_quotient + 39*
 * R-squared: 0.12
 * Correlation Coefficient (r): -0.36
 ```{r pressure, echo=FALSE}
@@ -250,8 +245,8 @@ ggplot(data = df1, aes(x = Adgangskvotienter, y = ledighed_nyudd)) +
 ![](Diagrams/1.png)
 
 **Unemployment 10 years after school and admission quotients:**
-Linear model (level-level): 
-*Unemployment 10 years out = -0.48 \* Adgangskvotient + 6.7*
+
+* Linear model (level-level): *Unemployment 10 years out = -0.48 \* Adgangskvotient + 6.7*
 * R-squared: 0.068
 * Correlation Coefficient (r): -0.28
 
@@ -266,8 +261,8 @@ ggplot(data = df2, aes(x = Adgangskvotienter, y = ledighed_10aar)) +
 ![](Diagrams/2.png)
 
 **Wages out of school and admission quotients:**
-Linear model (level-level): 
-*Wages out of school (kr) = 1200 \* Adgangskvotient + 25000*
+
+* Linear model (level-level): *Wages out of school (kr) = 1200 \* Adgangskvotient + 25000*
 * R-squared: 0.10
 * Correlation Coefficient (r): 0.33
 ```{r pressure, echo=FALSE}
@@ -281,8 +276,8 @@ ggplot(data = df3, aes(x = Adgangskvotienter, y = maanedloen_nyudd)) +
 ![](Diagrams/3.png)
 
 **Wages 10 years out and admission quotients:**
-Linear model (level-level): 
-*Wages 10 years out (kr) = 1100 \* Adgangskvotient + 39000*
+
+* Linear model (level-level): *Wages 10 years out (kr) = 1100 \* Adgangskvotient + 39000*
 * R-squared: 0.056
 * Correlation Coefficient (r): 0.26
 ```{r pressure, echo=FALSE}
@@ -297,7 +292,7 @@ ggplot(data = df4, aes(x = Adgangskvotienter, y = maanedloen_10aar)) +
 
 ## Tableau Dashboard
 
-![](Diagrams/Dashboard 1.png)
+![](Diagrams/Dashboard_1.png)
 
 ## Conclusions
 None of the above models show any strong relationships. All r-levels are below 0.4 and R-squared does not even stretch as far as 0.20. This seems to lead to a rejection of the original hypothesis: no, the choice of study does not solely depend on projected wages. A higher admission quotient does not mirror high projected earnings and is probably a function of far more than just earnings.

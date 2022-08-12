@@ -1,5 +1,5 @@
 # Is Choice of Major Based on Future Financial Outlook? (Google Data Analytics Capstone Project)
-Data analysis project looking at the relationship between admission quotients and future financial outlook in the Danish university system - Google Data Analytics Course, Final Project
+**Data analysis project looking at the relationship between admission quotients and future financial outlook in the Danish university system - Google Data Analytics Course, Final Project**
 
 ## Background
 
